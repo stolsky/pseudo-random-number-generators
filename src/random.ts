@@ -1,4 +1,5 @@
 /* Example of a facade for a pseudo random number generator.
+ * Source: https://github.com/stolsky/pseudo-random-number-generators/tree/main
  *
  * The interface provides the methods random() and gauss()
  * as well as an explicit setSeed() method.
@@ -55,12 +56,12 @@ const gauss = (m: number = 0, sd: number = 1): number => {
  * @returns {number}
  */
 const random = (from: number = 0, to: number = 1): number => {
-    const next = prng();
+    const next = prng()
     if (Number.isFinite(from) && Number.isFinite(to)) {
-        return from + next * (to - from);
+        return from + next * (to - from)
     }
-    return next;
-};
+    return next
+}
 
 /** Creates a new random number generator with the given seed.
  *
@@ -70,15 +71,15 @@ const random = (from: number = 0, to: number = 1): number => {
  */
 const set_seed = (seed: string = ""): void => {
     const useSeed = seed.length === 0 ? `${Math.random()}` : seed
-    const hash = xmur3(useSeed);
-    prng = xoshiro128ss(hash(), hash(), hash(), hash());
-};
+    const hash = xmur3(useSeed)
+    prng = xoshiro128ss(hash(), hash(), hash(), hash())
+}
 
 // initialization so `random()` and `gauss()` can be used right from the start
-set_seed();
+set_seed()
 
-export default random;
+export default random
 export {
     gauss,
     set_seed
-};
+}
