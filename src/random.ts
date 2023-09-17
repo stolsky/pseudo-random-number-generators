@@ -18,7 +18,7 @@ let prng: () => number
  *
  * @returns {[number, number]} two standard, normally distributed samples
  */
-const boxMullerTransform = (): [number, number] => {
+const box_muller_transform = (): [number, number] => {
 
     const u1 = prng()
     const u2 = prng()
@@ -42,7 +42,7 @@ let samples: number[] = []
  */
 const gauss = (m: number = 0, sd: number = 1): number => {
     if (samples.length === 0) {
-        samples = boxMullerTransform()
+        samples = box_muller_transform()
     }
     return m + (samples.pop() as number) * sd
 }
