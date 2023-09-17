@@ -15,6 +15,16 @@
         "sourceType": "module"
     },
     "rules": {
-        "@typescript-eslint/naming-convention": [{ "format": ["snake_case"] }]
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+              "selector": "variable",
+              "format": [ "PascalCase", "snake_case", "UPPER_CASE"]
+            }
+        ],
+        "max-depth": [
+            "error",
+            { "max": 3 }
+        ]
     }
 }
