@@ -1,4 +1,4 @@
-const TWO_POW_32 = 2 ** 32
+import { TWO_POW_32 } from "../utils/math_consts"
 
 // https://prng.di.unimi.it/
 // https://vigna.di.unimi.it/ftp/papers/ScrambledLinear.pdf

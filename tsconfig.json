@@ -4,7 +4,11 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "declaration": true,
     "skipLibCheck": true,
+    "outDir": "./dist",
+
+    "strictFunctionTypes": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -19,6 +23,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "tests/**/*"],
+  "include": ["vitest.config.ts", "src", "tests/**/*"],
   "exclude": ["node_modules"]
 }

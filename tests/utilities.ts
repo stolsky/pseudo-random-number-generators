@@ -17,6 +17,15 @@ const string_permutations = (str: string): string[] => {
     )
 }
 
+const generate_numbers_from_algorithm = (algorithm: () => number, test_size: number): Set<number> => {
+    const numbers = new Set<number>()
+    for (let i = 0; i < test_size; i = i + 1) {
+        numbers.add(algorithm())
+    }
+    return numbers
+}
+
 export {
+    generate_numbers_from_algorithm,
     string_permutations
 }

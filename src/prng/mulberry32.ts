@@ -1,4 +1,4 @@
-const TWO_POW_32 = 2 ** 32
+import { TWO_POW_32 } from "../utils/math_consts"
 
 /**
  * Original C implementation: https://gist.github.com/tommyettinger/46a874533244883189143505d203312c

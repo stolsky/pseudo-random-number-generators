@@ -1,4 +1,4 @@
-const TWO_POW_32 = 2 ** 32
+import { TWO_POW_32 } from "../utils/math_consts"
 
 const sfc32 = (a: number, b: number, c: number, d: number) => () => {
     a = a | 0

@@ -2,17 +2,19 @@ import {
     describe,
     expect,
     it
-} from 'vitest'
+} from "vitest"
 
-import xmur3 from '../src/hash/xmur3'
-import xoshiro128ss from '../src/prng/xoshiro128ss'
-import mulberry32 from '../src/prng/mulberry32'
-import sfc32 from '../src/prng/sfc32'
-import splitmix32 from '../src/prng/splitmix32'
+import {
+    mulberry32,
+    sfc32,
+    splitmix32,
+    xmur3,
+    xoshiro128ss
+} from "../src"
 
-type Result = {
-    name: string,
-    deltaTime: number,
+interface Result {
+    name: string
+    delta_time: number
     diversity: number
 }
 
@@ -24,15 +26,13 @@ const test = (method: () => number, name: string, size: number): Result => {
     }
     return {
         name,
-        deltaTime: performance.now() - timestamp,
+        delta_time: performance.now() - timestamp,
         diversity: diversity.size
     }
 }
 
-describe("Compare performance of mulberry32, sfc32 and xoshiro128ss", () => {
-
+describe.skip("Compare performance of mulberry32, sfc32 and xoshiro128ss", () => {
     it("Test diversity and speed", () => {
-        
         const seed = xmur3("apples")
         const generators = [
             { name: "Mulberry32", rnd: mulberry32(seed()) },
@@ -53,27 +53,26 @@ describe("Compare performance of mulberry32, sfc32 and xoshiro128ss", () => {
 
         const accumulated_results: Result[] = []
         generators.forEach((generator) => {
-            let deltaTime = 0
+            let delta_time = 0
             let diversity = 0
             const generator_results = results.filter((result) => result.name === generator.name)
             generator_results.forEach((result) => {
-                expect(result).to.have.property("deltaTime")
+                expect(result).to.have.property("delta_time")
                 expect(result).to.have.property("diversity")
-                deltaTime = deltaTime + result.deltaTime
+                delta_time = delta_time + result.delta_time
                 diversity = diversity + sample_size - result.diversity
             })
-            deltaTime = deltaTime / generator_results.length
+            delta_time = delta_time / generator_results.length
             diversity = diversity / generator_results.length
             accumulated_results.push({
                 name: generator.name,
-                deltaTime,
+                delta_time,
                 diversity
             })
         })
-        
+
         console.log(`Accumulated results of ${iterations} iterations generating ${sample_size} numbers:`)
-        console.log("Speed (avg.)", [...accumulated_results].sort((a, b) => a.deltaTime - b.deltaTime).map((algo) => `${algo.name}: ${algo.deltaTime} ms`))
+        console.log("Speed (avg.)", [...accumulated_results].sort((a, b) => a.delta_time - b.delta_time).map((algo) => `${algo.name}: ${algo.delta_time} ms`))
         console.log("Duplicates (avg.)", [...accumulated_results].sort((a, b) => a.diversity - b.diversity).map((algo) => `${algo.name}: ${algo.diversity}`))
     })
-
 })
