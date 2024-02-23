@@ -7,7 +7,7 @@ import {
 } from "vitest"
 
 import { string_permutations } from "./utilities"
-import { xmur3 } from "../src/"
+import { xmur3 } from "../lib"
 
 describe("Test hash algorithm xmur3", () => {
     it("Result always a positive 32 bit number", () => {

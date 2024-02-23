@@ -6,7 +6,7 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "declaration": true,
     "skipLibCheck": true,
-    "outDir": "./dist",
+    "outDir": "dist",
 
     "strictFunctionTypes": true,
 
@@ -23,6 +23,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vitest.config.ts", "src", "tests/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["vitest.config.ts", "lib", "tests/**/*"],
+  "exclude": ["node_modules", "coverage"]
 }

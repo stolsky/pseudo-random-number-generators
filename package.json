@@ -1,30 +1,53 @@
 {
-  "name": "pseudo-random-number-generators",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
-  "scripts": {
-    "coverage": "vitest run --coverage",
-    "build": "tsc && vite build",
-    "dev": "vite",
-    "preview": "vite preview",
-    "test": "vitest"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@vitest/coverage-v8": "^1.3.0",
-    "eslint": "^8.56.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.3",
-    "vitest": "^1.3.0"
-  }
+    "name": "pseudo-random-number-generators",
+    "description": "Typescript implementation of popular pseudo random number generators.",
+    "author": "stolsky",
+    "homepage": "https://www.stolsky.de",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stolsky/pseudo-random-number-generators.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stolsky/pseudo-random-number-generators/issues"
+    },
+    "keywords": [
+        "prng",
+        "pseudo-random-number-generation",
+        "library",
+        "typescript"
+    ],
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./dist/prng.umd.js",
+    "module": "./dist/prng.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/prng.es.js",
+            "require": "./dist/prng.umd.js"
+        }
+    },
+    "files": ["dist"],
+    "scripts": {
+        "coverage": "vitest run --coverage",
+        "build": "tsc && vite build",
+        "dev": "vite",
+        "preview": "vite preview",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.19",
+        "@typescript-eslint/eslint-plugin": "^6.21.0",
+        "@vitest/coverage-v8": "^1.3.0",
+        "eslint": "^8.56.0",
+        "eslint-config-standard-with-typescript": "^43.0.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.1.1",
+        "typescript": "^5.3.3",
+        "vite": "^5.1.3",
+        "vite-plugin-dts": "^3.7.3",
+        "vitest": "^1.3.0"
+    }
 }

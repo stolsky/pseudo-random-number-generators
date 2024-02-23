@@ -4,9 +4,9 @@ logs
 npm-debug.log*
 
 node_modules
-dist
-dist-ssr
-*.local
+
+# Vitest
+coverage
 
 # Editor directories and files
 .vscode/*
