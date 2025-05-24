@@ -1,8 +1,7 @@
 /* Example of a facade for a pseudo random number generator.
  * Source: https://github.com/stolsky/pseudo-random-number-generators/tree/main
  *
- * The interface provides the methods random() and gauss()
- * as well as an explicit setSeed() method.
+ * The interface provides the methods random() and gauss().
  */
 
 import gauss from "./utils/gauss"
