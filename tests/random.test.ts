@@ -13,7 +13,7 @@ import {
     splitmix32,
     xmur3,
     xoshiro128ss
-} from "../lib"
+} from "../src"
 import { generate_numbers_from_algorithm } from "./utilities"
 
 describe("Test default behaviour", () => {

@@ -10,7 +10,7 @@ import {
     splitmix32,
     xmur3,
     xoshiro128ss
-} from "../lib"
+} from "../src"
 
 interface Result {
     name: string

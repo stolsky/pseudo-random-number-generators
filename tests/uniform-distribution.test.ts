@@ -8,7 +8,7 @@ import {
     sfc32,
     xmur3,
     xoshiro128ss
-} from "../lib"
+} from "../src"
 
 describe("Test pseudorandom number generator for its uniform distribution", () => {
     const test_size = 500_000
