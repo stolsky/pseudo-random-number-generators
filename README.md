@@ -1,3 +1,5 @@
+[![NPM Version](https://img.shields.io/npm/v/pseudo-random-number-generators-ts.svg?style=for-the-badge)](https://www.npmjs.com/package/pseudo-random-number-generators-ts)
+
 # Abstract
 
 Dependency-free TypeScript implementation with comparison tests of popular pseudo random number generators.
