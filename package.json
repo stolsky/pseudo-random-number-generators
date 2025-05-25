@@ -1,5 +1,6 @@
 {
     "name": "pseudo-random-number-generators-ts",
+    "version": "1.0.2",
     "description": "Dependency-free Typescript implementation of popular pseudo random number generators.",
     "author": "stolsky",
     "homepage": "https://www.stolsky.de",
@@ -16,8 +17,10 @@
         "library",
         "typescript"
     ],
-    "version": "1.0.0",
     "type": "module",
+    "files": [
+        "dist"
+    ],
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {

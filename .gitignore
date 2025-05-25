@@ -3,8 +3,13 @@ logs
 *.log
 npm-debug.log*
 
+# NPM/Node
 node_modules
+package-lock.json
+.npmignore
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+
+dist
