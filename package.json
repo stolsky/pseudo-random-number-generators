@@ -1,6 +1,6 @@
 {
     "name": "pseudo-random-number-generators-ts",
-    "description": "Typescript implementation of popular pseudo random number generators.",
+    "description": "Dependency-free Typescript implementation of popular pseudo random number generators.",
     "author": "stolsky",
     "homepage": "https://www.stolsky.de",
     "repository": {
