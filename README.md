@@ -1,6 +1,6 @@
 ## Abstract
 
-A dependency-free TypeScript implementation with comparison tests of popular pseudo random number generators.
+Dependency-free TypeScript implementation with comparison tests of popular pseudo random number generators.
 
 Original JavaScript implementations were taken from https://github.com/bryc/code/blob/master/jshash/PRNGs.md.
 
