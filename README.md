@@ -1,22 +1,33 @@
-## Abstract
+# Abstract
 
 Dependency-free TypeScript implementation with comparison tests of popular pseudo random number generators.
 
 Original JavaScript implementations were taken from https://github.com/bryc/code/blob/master/jshash/PRNGs.md.
 
-## Implementations
+# Getting started
 
-### PRNGs
+```bash
+npm install pseudo-random-number-generators-ts
+```
+
+# Implementations
+
+## Pseudo random number generators
 * Mulberry32
 * sfc32
 * SplitMix32
 * Xoshiro128ss
 
-### Hash algorithms
+## Hash algorithms
 * MurmurHash3 variant (xmur3)
 
-### Functionality
-* random(from = 0, to = 1)
-  * get a random number between "from" and "to" including this range
-* gauss(m = 0, sd = 1)
-  * get a normally distributed random number using the mean value (m) and the standard deviation (sd)
+# Usage
+
+## Functionality
+```js
+// get a random number between "from" and "to" including this range
+random(from = 0, to = 1) 
+
+// get a normally distributed random number using the mean value (m) and the standard deviation (sd)
+gauss(m = 0, sd = 1)
+```
